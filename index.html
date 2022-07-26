@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="zoom">
+    <img src="leftm.png" alt="" id="layer1">
+    <img src="rightm.png" alt=""  id="layer2">
+    <img src="zahra salimi-logos_white.png" alt=""  id="layer3">
+   </div> 
+   <div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut minus possimus illo eius sequi libero voluptatem saepe ipsam. Ab, magni delectus quidem unde quae minima, dolorem deleniti ullam quam illum exercitationem vero? Quos aliquam deserunt, inventore distinctio tempore nesciunt vel magnam velit fugiat quisquam atque debitis quo nostrum unde blanditiis cum. Voluptatum reprehenderit enim magni natus qui ab nobis? Itaque, minima culpa ab sint harum, voluptatem magnam est dolores nobis dolorum tempore rerum ipsam. Magni, dolor! Aliquam, aspernatur ab illum eius consectetur illo ipsam expedita temporibus! Qui sint ullam nisi minima assumenda odit, tenetur dolorem nesciunt. Error harum nemo aperiam tempore, culpa recusandae libero! Reiciendis itaque placeat veritatis fuga quo, porro optio, perspiciatis modi non praesentium culpa nam maiores voluptas? Doloremque iste adipisci sed doloribus vel, nulla dolor vero soluta, deleniti sint facilis labore perferendis? Quae, odit repellat. Temporibus autem ducimus quaerat! Omnis ab laudantium quos inventore quia natus suscipit. Doloremque et esse itaque. Temporibus tempore cumque, cupiditate soluta nemo, quibusdam id sed architecto similique quae dolores culpa, maxime quas voluptates totam quam. Laudantium harum officiis suscipit consequatur perferendis animi amet inventore, dolorum voluptates impedit asperiores exercitationem quasi assumenda, eius dolor commodi deleniti atque? Eos, hic cupiditate, rem recusandae aspernatur unde ipsam perferendis fuga deserunt magni maiores, amet repellendus. Consequuntur eius sed magni non, praesentium suscipit consequatur at quisquam, repudiandae quia dolorem voluptatem perferendis eaque saepe, similique quam nobis in nesciunt? Molestias fugiat neque cumque veniam, eaque magni ducimus, iusto, eos placeat odio quaerat hic illum distinctio. Doloribus id, nihil obcaecati debitis provident quas nisi consequuntur. Alias voluptatibus culpa nihil libero rem? Fugit, eos aliquid dignissimos accusamus incidunt, animi ducimus nobis impedit maxime praesentium laboriosam aliquam qui iste eum voluptate porro obcaecati magni nemo soluta, itaque molestias magnam voluptatem eveniet. Beatae tempore esse laboriosam explicabo rerum vitae expedita, dolore maxime ab voluptatibus necessitatibus assumenda excepturi sunt quibusdam nam at ut architecto a cum alias aspernatur. Quasi facilis, mollitia dolor aperiam harum cupiditate voluptate natus, qui ex fuga perferendis aut soluta praesentium nisi eius, expedita alias ullam assumenda maxime minus. Suscipit minus iste quis aliquam expedita autem nihil excepturi quisquam. Similique hic deserunt delectus quibusdam atque sint, ducimus consectetur voluptates animi 
+    </p>
+   </div>
+</body>
+<script>
+    let layrer1=document.getElementById("layer1")
+    let layrer2=document.getElementById("layer2")
+    let layrer3=document.getElementById("layer3")
+    scroll=window.pageYOffset
+    console.log("s"+ scroll)
+    document.addEventListener("scroll", function(e){
+        let offset=window.pageYOffset
+        scroll=offset
+        console.log(100+ scroll/5)
+        layrer1.style.width=(100+ scroll/5)+"%"
+        layrer2.style.width=(100+ scroll/5)+"%"
+        layrer2.style.right=(- scroll/8)+"%"
+        layrer1.style.left=(30- scroll/5)+"%"
+        layrer3.style.transform="translateY("+(50-scroll/7)+"%)"
+    })  
+</script>
+</html>
